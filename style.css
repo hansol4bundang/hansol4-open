@@ -499,6 +499,30 @@ em { font-style: normal; }
   line-height: 1.8;
 }
 
+/* ── 전자동의서 QR ── */
+.consent-qr-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 32px 0 36px;
+}
+.consent-qr-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  padding: 8px;
+  background: #fff;
+}
+.consent-qr-label {
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.7;
+}
+
 /* ── 문자 전용 안내 ── */
 .sms-only-notice {
   display: flex;
