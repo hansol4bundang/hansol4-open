@@ -694,6 +694,24 @@ em { font-style: normal; }
 @media (max-width: 640px) {
   html { font-size: 17px; }
 
+  /* 탭 — 2×2 그리드 */
+  .nav-inner {
+    flex-wrap: wrap;
+  }
+  .nav-tab {
+    flex: 0 0 50%;
+    font-size: 0.75rem;
+    padding: 12px 6px;
+    border-bottom: none;
+    border-top: 2px solid transparent;
+    margin-bottom: 0;
+    margin-top: -2px;
+  }
+  .nav-tab.active {
+    border-top-color: #60a5fa;
+    border-bottom-color: transparent;
+  }
+
   .hero { padding: 48px 20px 40px; }
   .hero-title { font-size: 1.6rem; }
 
