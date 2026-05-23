@@ -13,6 +13,16 @@
       분당신도시 노후계획도시 37구역 &nbsp;|&nbsp; 한솔마을 4단지 재건축 추진준비위원회
     </div>
 
+    <!-- 탭 네비게이션 -->
+    <nav class="site-nav" id="site-nav">
+      <div class="inner nav-inner">
+        <a class="nav-tab" href="#consent">전자동의서 작성안내</a>
+        <a class="nav-tab" href="#bizplan">사업성 분석</a>
+        <a class="nav-tab" href="#whynow">왜 지금 재건축인가</a>
+        <a class="nav-tab nav-tab-cta" href="#cta">동의서 바로 작성 →</a>
+      </div>
+    </nav>
+
     <!-- 히어로 -->
     <section class="hero">
       <div class="inner">
@@ -45,7 +55,7 @@
     </section>
 
     <!-- 전자동의서 CTA 메인 -->
-    <section class="consent-section">
+    <section class="consent-section" id="consent">
       <div class="inner">
         <h2 class="sec-title">전자동의서 작성 안내</h2>
         <p class="sec-desc">
@@ -137,7 +147,7 @@
     </section>
 
     <!-- 사업성 안내 -->
-    <section class="biz-section">
+    <section class="biz-section" id="bizplan">
       <div class="inner">
         <h2 class="sec-title">사업성 분석 결과</h2>
         <p class="sec-desc">
@@ -184,7 +194,7 @@
     </section>
 
     <!-- 주요 호재 -->
-    <section class="horae-section">
+    <section class="horae-section" id="whynow">
       <div class="inner">
         <h2 class="sec-title">왜 지금 재건축인가</h2>
         <p class="sec-desc">지금이 한솔마을 4단지에 가장 유리한 시점입니다.</p>
@@ -237,7 +247,7 @@
     </section>
 
     <!-- 하단 CTA 재강조 -->
-    <section class="final-cta">
+    <section class="final-cta" id="cta">
       <div class="inner">
         <h2>지금 바로 동의서를 작성해 주세요</h2>
         <p>소유주 여러분의 한 분 한 분의 참여가 한솔마을 4단지의 미래를 앞당깁니다.</p>
@@ -278,5 +288,32 @@
       </div>
     </footer>
 
+    <script>
+      const nav = document.getElementById('site-nav');
+      const tabs = document.querySelectorAll('.nav-tab:not(.nav-tab-cta)');
+      const sections = ['consent','bizplan','whynow','cta'].map(id => document.getElementById(id));
+      const navH = () => nav.offsetHeight;
+
+      document.documentElement.style.scrollBehavior = 'smooth';
+
+      function setActive() {
+        let current = 0;
+        sections.forEach((sec, i) => {
+          if (sec && sec.getBoundingClientRect().top - navH() - 10 <= 0) current = i;
+        });
+        tabs.forEach((t, i) => t.classList.toggle('active', i === current));
+      }
+
+      window.addEventListener('scroll', setActive, { passive: true });
+      setActive();
+
+      document.querySelectorAll('.nav-tab').forEach(tab => {
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.querySelector(tab.getAttribute('href'));
+          if (target) window.scrollTo({ top: target.offsetTop - navH(), behavior: 'smooth' });
+        });
+      });
+    </script>
   </body>
 </html>

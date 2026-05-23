@@ -48,6 +48,51 @@ em { font-style: normal; }
   padding: 10px 20px;
 }
 
+/* ── 탭 네비게이션 ── */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--blue-dark);
+  border-bottom: 3px solid var(--blue);
+  box-shadow: 0 2px 12px rgba(8,47,160,0.18);
+}
+.nav-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+}
+.nav-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-tab:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+.nav-tab.active {
+  color: #fff;
+  border-bottom-color: #60a5fa;
+}
+.nav-tab-cta {
+  color: #fde68a;
+  font-weight: 800;
+}
+.nav-tab-cta:hover { color: #fef3c7; }
+
 /* ── 히어로 ── */
 .hero {
   background: linear-gradient(170deg, #eaf3ff 0%, #fff 70%);
