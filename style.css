@@ -335,6 +335,26 @@ em { font-style: normal; }
 .notice-icon { font-size: 1.1rem; margin-top: 2px; flex-shrink: 0; }
 .biz-notice p { font-size: 0.85rem; color: #92400e; line-height: 1.65; }
 
+/* ── 입지 장점 ── */
+.loc-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.loc-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue-mid);
+  border-radius: 12px;
+  padding: 20px 18px;
+}
+.loc-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.loc-card strong { display: block; color: var(--blue-dark); font-size: 0.95rem; margin-bottom: 6px; }
+.loc-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+
 .biz-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -707,6 +727,7 @@ em { font-style: normal; }
   }
 
   /* 사업성 카드 — 세로 */
+  .loc-grid { grid-template-columns: 1fr; }
   .biz-grid { grid-template-columns: 1fr; }
 
   /* 호재 카드 — 세로 */
