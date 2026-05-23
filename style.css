@@ -653,6 +653,13 @@ em { font-style: normal; }
 .kakao-sub { font-size: 0.78rem !important; color: #b45309 !important; }
 
 .qr-placeholder { flex-shrink: 0; }
+.qr-placeholder img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
 .qr-inner {
   width: 140px;
   height: 140px;
