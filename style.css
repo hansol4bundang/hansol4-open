@@ -827,6 +827,110 @@ em { font-style: normal; }
   .steps-wrap { padding: 24px 20px; }
 }
 
+/* ── PC 문자 안내 모달 ── */
+.sms-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.sms-modal-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.sms-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+}
+.sms-modal-close:hover { color: var(--text); }
+.sms-modal-icon { font-size: 2.4rem; margin-bottom: 12px; }
+.sms-modal-title {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.sms-modal-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.sms-modal-number-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--blue-light);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+}
+.sms-modal-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  letter-spacing: 0.04em;
+}
+.sms-modal-warn {
+  font-size: 0.8rem;
+  color: #dc2626;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.sms-modal-body-wrap {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  text-align: left;
+}
+.sms-modal-body-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.sms-modal-body-text {
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.8;
+  white-space: pre-line;
+  margin-bottom: 14px;
+  font-family: inherit;
+}
+.sms-copy-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.sms-copy-btn:hover { background: var(--blue-dark); }
+.sms-copy-msg-btn { width: 100%; margin-top: 4px; padding: 10px; }
+
 /* 태블릿 (641~900px) */
 @media (min-width: 641px) and (max-width: 900px) {
   .horae-grid { grid-template-columns: 1fr; }
