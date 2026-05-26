@@ -25,7 +25,7 @@ body {
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .inner {
@@ -198,7 +198,7 @@ em { font-style: normal; }
 .sec-desc {
   font-size: 1rem;
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.6;
   margin-top: 16px;
   margin-bottom: 36px;
 }
@@ -265,7 +265,7 @@ em { font-style: normal; }
   font-size: 0.82rem;
   color: var(--muted);
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.55;
   padding: 14px 20px;
   background: var(--surface);
   border-radius: 10px;
@@ -447,7 +447,7 @@ em { font-style: normal; }
   color: var(--blue-dark);
   margin-bottom: 6px;
 }
-.biz-result p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+.biz-result p { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
 
 /* ── 호재 섹션 ── */
 .horae-section { padding: 72px 24px; }
@@ -499,7 +499,7 @@ em { font-style: normal; }
 .horae-card p {
   font-size: 0.85rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 /* ── 하단 CTA ── */
@@ -592,7 +592,7 @@ em { font-style: normal; }
   font-size: 0.92rem;
   color: var(--muted);
   text-align: center;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 /* ── 문자 전용 안내 ── */
@@ -622,12 +622,12 @@ em { font-style: normal; }
 .sms-only-notice p {
   font-size: 0.92rem;
   color: #7f1d1d;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 .red { color: #dc2626; }
 
 /* ── 카카오 QR ── */
-.kakao-wrap { margin-top: 8px; }
+.kakao-wrap { margin-top: 8px; margin-bottom: 28px; }
 
 .kakao-card {
   background: #fffde7;
@@ -654,7 +654,7 @@ em { font-style: normal; }
 .kakao-info p {
   font-size: 0.88rem;
   color: #92400e;
-  line-height: 1.7;
+  line-height: 1.55;
   margin-bottom: 6px;
 }
 .kakao-sub { font-size: 0.78rem !important; color: #b45309 !important; }
