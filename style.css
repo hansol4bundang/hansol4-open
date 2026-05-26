@@ -46,7 +46,10 @@ em { font-style: normal; }
   font-weight: 600;
   letter-spacing: 0.04em;
   padding: 10px 20px;
+  line-height: 1.8;
 }
+.br-mobile { display: none; }
+.topbar-sep { display: inline; }
 
 /* ── 탭 네비게이션 ── */
 .site-nav {
@@ -818,6 +821,8 @@ em { font-style: normal; }
   .footer-row { flex-direction: column; gap: 20px; }
 
   .br-pc { display: none; }
+  .br-mobile { display: block; }
+  .topbar-sep { display: none; }
 
   /* 섹션 패딩 축소 */
   .consent-section,
