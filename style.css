@@ -703,6 +703,12 @@ em { font-style: normal; }
   color: var(--text);
   margin-bottom: 5px;
 }
+.tel-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tel-link:hover { color: var(--blue); }
 .footer-sms-only {
   display: inline-block;
   font-size: 0.72rem;
