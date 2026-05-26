@@ -279,17 +279,17 @@ em { font-style: normal; }
   margin-bottom: 24px;
 }
 .steps {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
 }
 .step-item {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
-  flex: 1;
-  min-width: 160px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px 20px;
 }
 .step-num {
   width: 36px;
@@ -306,19 +306,12 @@ em { font-style: normal; }
 }
 .step-body strong {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: var(--text);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
-.step-body p { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
-.step-arrow {
-  color: var(--blue);
-  font-size: 1.4rem;
-  align-self: center;
-  flex-shrink: 0;
-  opacity: 0.5;
-  padding-top: 4px;
-}
+.step-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.65; }
+.step-arrow { display: none; }
 
 /* ── 사업성 섹션 ── */
 .biz-section {
@@ -765,16 +758,10 @@ em { font-style: normal; }
   }
   .btn-label { font-size: 1.1rem; }
 
-  /* 작성 단계 — 세로 */
+  /* 작성 단계 — 모바일 1열 */
   .steps {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .step-arrow {
-    transform: rotate(90deg);
-    align-self: flex-start;
-    margin-left: 8px;
-    display: none;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   /* 사업성 카드 — 세로 */
