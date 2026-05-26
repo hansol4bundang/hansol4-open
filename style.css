@@ -170,6 +170,13 @@ em { font-style: normal; }
   padding: 72px 24px;
   background: #fff;
 }
+.consent-section .btn-outline {
+  background: #FFCA28;
+  color: #1a1201;
+  border: none;
+}
+.consent-section .btn-outline:hover { background: #FFD54F; }
+.consent-section .btn-outline .btn-sub { color: #5a4200; }
 
 /* 공통 섹션 타이틀 */
 .sec-title {
