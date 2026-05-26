@@ -897,19 +897,24 @@ em { font-style: normal; }
   border-color: var(--blue);
 }
 .sms-modal-number {
-  display: block;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--blue-dark);
   letter-spacing: 0.04em;
 }
-.sms-modal-number-hint {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--blue);
-  font-weight: 600;
-  margin-top: 4px;
-  opacity: 0.8;
+.sms-number-copy-badge {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.sms-modal-number-wrap:hover .sms-number-copy-badge {
+  background: var(--blue-dark);
 }
 .sms-modal-warn {
   font-size: 0.8rem;

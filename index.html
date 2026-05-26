@@ -328,10 +328,8 @@
         <h2 class="sms-modal-title" id="sms-modal-title">PC에서는 직접 문자를 보내주세요</h2>
         <p class="sms-modal-desc">스마트폰 문자앱에서 아래 번호로 문자를 보내주시면 됩니다.</p>
         <div class="sms-modal-number-wrap" id="copy-number-btn" role="button" tabindex="0" title="클릭하면 번호가 복사됩니다">
-          <div>
-            <span class="sms-modal-number">010-5926-4459</span>
-            <span class="sms-modal-number-hint" id="number-hint-text">눌러서 복사</span>
-          </div>
+          <span class="sms-modal-number">010-5926-4459</span>
+          <span class="sms-number-copy-badge" id="number-hint-text">전화번호 복사</span>
         </div>
         <p class="sms-modal-warn">전화는 받지 않습니다. 문자만 가능합니다.</p>
         <div class="sms-modal-body-wrap">
@@ -402,12 +400,10 @@
       function copyNumber() {
         navigator.clipboard.writeText('010-5926-4459').then(() => {
           numberHint.textContent = '복사됐습니다!';
-          copyNumberBtn.style.background = '#dcfce7';
-          copyNumberBtn.style.borderColor = '#16a34a';
+          numberHint.style.background = '#16a34a';
           setTimeout(() => {
-            numberHint.textContent = '눌러서 복사';
-            copyNumberBtn.style.background = '';
-            copyNumberBtn.style.borderColor = '';
+            numberHint.textContent = '전화번호 복사';
+            numberHint.style.background = '';
           }, 1800);
         });
       }
