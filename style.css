@@ -241,17 +241,18 @@ em { font-style: normal; }
 
 .btn-icon { font-size: 2rem; }
 .btn-label {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.01em;
 }
 .btn-sub {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   opacity: 0.85;
   line-height: 1.5;
 }
 .btn-primary .btn-sub { color: rgba(255,255,255,.9); }
 .btn-outline .btn-sub { color: var(--muted); }
+.final-cta .btn-primary .btn-sub { color: var(--muted); }
 
 .btn-note {
   font-size: 0.82rem;
