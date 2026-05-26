@@ -532,6 +532,116 @@ em { font-style: normal; }
   line-height: 1.55;
 }
 
+/* ── 모금 안내 ── */
+.donation-section {
+  background: #f8f9fa;
+  border-top: 1px solid var(--border);
+  padding: 72px 24px;
+}
+
+.donation-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.donation-account {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.donation-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.donation-row:last-child { border-bottom: none; }
+.donation-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 600;
+  min-width: 72px;
+  flex-shrink: 0;
+}
+.donation-value {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.account-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  letter-spacing: 0.04em;
+}
+.amount-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.donation-memo-wrap {
+  padding: 20px 28px;
+  background: var(--blue-light);
+  border-bottom: 1px solid var(--blue-mid);
+}
+.donation-memo-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.required-badge {
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+.donation-memo-format {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  margin-bottom: 6px;
+}
+.donation-memo-example {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.donation-warn {
+  padding: 16px 28px;
+  background: #fff7f7;
+  font-size: 0.88rem;
+  color: #991b1b;
+  line-height: 1.6;
+  border-top: 1px solid #fecaca;
+}
+.donation-warn strong { color: #dc2626; }
+
+.donation-cafe-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #03c75a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 16px 36px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.donation-cafe-btn:hover { background: #02a74d; }
+
 /* ── 하단 CTA ── */
 .final-cta {
   background: var(--blue);
