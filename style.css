@@ -637,8 +637,12 @@ em { font-style: normal; }
 }
 .memo-ex-desc {
   font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 700;
+}
+.memo-ex-arrow {
+  font-size: 0.9rem;
   color: var(--muted);
-  font-weight: 500;
 }
 .donation-memo-warn {
   background: #fff1f1;
