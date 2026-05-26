@@ -252,7 +252,7 @@ em { font-style: normal; }
 }
 .btn-primary .btn-sub { color: rgba(255,255,255,.9); }
 .btn-outline .btn-sub { color: var(--muted); }
-.final-cta .btn-primary .btn-sub { color: var(--muted); }
+.final-cta .btn-primary .btn-sub { color: #3a4a6b; }
 
 .btn-note {
   font-size: 0.82rem;
@@ -523,12 +523,12 @@ em { font-style: normal; }
 }
 .final-cta .btn-primary:hover { background: #f0f7ff; }
 .final-cta .btn-outline {
-  background: transparent;
-  color: #fff;
-  border-color: rgba(255,255,255,.7);
+  background: #FFCA28;
+  color: #1a1201;
+  border: none;
 }
-.final-cta .btn-outline:hover { background: rgba(255,255,255,.1); }
-.final-cta .btn-outline .btn-sub { color: rgba(255,255,255,.75); }
+.final-cta .btn-outline:hover { background: #FFD54F; }
+.final-cta .btn-outline .btn-sub { color: #5a4200; }
 
 /* ── 푸터 ── */
 .site-footer {
