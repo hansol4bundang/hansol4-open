@@ -327,9 +327,11 @@
         <div class="sms-modal-icon">💬</div>
         <h2 class="sms-modal-title" id="sms-modal-title">PC에서는 직접 문자를 보내주세요</h2>
         <p class="sms-modal-desc">스마트폰 문자앱에서 아래 번호로 문자를 보내주시면 됩니다.</p>
-        <div class="sms-modal-number-wrap">
-          <span class="sms-modal-number">010-5926-4459</span>
-          <button class="sms-copy-btn" data-copy="010-5926-4459" id="copy-number-btn">번호 복사</button>
+        <div class="sms-modal-number-wrap" id="copy-number-btn" role="button" tabindex="0" title="클릭하면 번호가 복사됩니다">
+          <div>
+            <span class="sms-modal-number">010-5926-4459</span>
+            <span class="sms-modal-number-hint" id="number-hint-text">눌러서 복사</span>
+          </div>
         </div>
         <p class="sms-modal-warn">전화는 받지 않습니다. 문자만 가능합니다.</p>
         <div class="sms-modal-body-wrap">
@@ -393,18 +395,33 @@
       smsModal.addEventListener('click', e => { if (e.target === smsModal) closeModal(); });
       document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-      // 복사 버튼
-      document.querySelectorAll('.sms-copy-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const text = btn.id === 'copy-msg-btn'
-            ? document.getElementById('sms-body-text').innerText
-            : btn.dataset.copy;
-          navigator.clipboard.writeText(text).then(() => {
-            const orig = btn.textContent;
-            btn.textContent = '복사됨!';
-            btn.style.background = '#16a34a';
-            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1800);
-          });
+      // 번호 박스 클릭 → 복사
+      const copyNumberBtn = document.getElementById('copy-number-btn');
+      const numberHint = document.getElementById('number-hint-text');
+      function copyNumber() {
+        navigator.clipboard.writeText('010-5926-4459').then(() => {
+          numberHint.textContent = '복사됐습니다!';
+          copyNumberBtn.style.background = '#dcfce7';
+          copyNumberBtn.style.borderColor = '#16a34a';
+          setTimeout(() => {
+            numberHint.textContent = '눌러서 복사';
+            copyNumberBtn.style.background = '';
+            copyNumberBtn.style.borderColor = '';
+          }, 1800);
+        });
+      }
+      copyNumberBtn.addEventListener('click', copyNumber);
+      copyNumberBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') copyNumber(); });
+
+      // 문자 내용 복사 버튼
+      document.getElementById('copy-msg-btn').addEventListener('click', () => {
+        const text = document.getElementById('sms-body-text').innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          const btn = document.getElementById('copy-msg-btn');
+          const orig = btn.textContent;
+          btn.textContent = '복사됐습니다!';
+          btn.style.background = '#16a34a';
+          setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1800);
         });
       });
     </script>
