@@ -260,7 +260,7 @@ em { font-style: normal; }
   opacity: 0.85;
   line-height: 1.5;
 }
-.btn-primary .btn-sub { color: rgba(255,255,255,.9); }
+.btn-primary .btn-sub { color: rgba(255,255,255,.8); font-size: 0.85rem; font-weight: 500; }
 .btn-outline .btn-sub { color: var(--muted); }
 .final-cta .btn-primary .btn-sub { color: #3a4a6b; }
 
@@ -285,6 +285,33 @@ em { font-style: normal; }
 .btn-single {
   max-width: 520px;
   width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 22px 28px;
+  box-shadow: 0 8px 32px rgba(16, 64, 200, 0.35);
+  border-radius: 16px;
+}
+.btn-single:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(16, 64, 200, 0.45);
+}
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.btn-arrow-icon {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.9);
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 16px;
+  transition: transform 150ms ease;
+}
+.btn-single:hover .btn-arrow-icon {
+  transform: translateX(4px);
 }
 
 /* 작성 후 진행 흐름 안내 (주요 공지 스타일) */
