@@ -826,6 +826,8 @@ em { font-style: normal; }
   box-shadow: 0 6px 24px rgba(0,0,0,.15);
 }
 .final-cta .btn-primary:hover { background: #f0f7ff; }
+.final-cta .btn-arrow-icon { color: var(--blue); }
+.final-cta .btn-primary .btn-sub { color: var(--muted); font-size: 0.85rem; font-weight: 500; }
 .final-cta .btn-outline {
   background: #FFCA28;
   color: #1a1201;
