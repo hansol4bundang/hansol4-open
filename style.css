@@ -366,16 +366,6 @@ em { font-style: normal; }
   font-weight: 600;
   line-height: 1.4;
 }
-.flow-step-final {
-  border: 1.5px solid var(--blue);
-}
-.flow-step-final .flow-step-num {
-  background: var(--blue-dark);
-}
-.flow-step-final .flow-step-text {
-  color: var(--blue-dark);
-  font-weight: 800;
-}
 .flow-step-arrow {
   font-size: 1.1rem;
   color: var(--blue);
