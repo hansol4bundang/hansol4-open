@@ -523,7 +523,7 @@ em { font-style: normal; }
   border-radius: 10px;
 }
 .rtl-info strong {
-  font-size: 0.78rem;
+  font-size: 1rem;
   color: #94a3b8;
   line-height: 1.4;
   font-weight: 600;
