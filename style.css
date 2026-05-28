@@ -276,6 +276,59 @@ em { font-style: normal; }
 }
 .btn-note strong { color: var(--text); }
 
+/* 단일 버튼 래퍼 */
+.single-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.btn-single {
+  max-width: 520px;
+  width: 100%;
+}
+
+/* 작성 후 진행 흐름 안내 */
+.consent-flow-notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--blue-light);
+  border: 1.5px solid var(--blue-mid);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.flow-notice-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--blue-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-right: 4px;
+  border-right: 2px solid var(--blue-mid);
+  margin-right: 4px;
+}
+.flow-steps-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.flow-node {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.flow-arr {
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 700;
+}
+.flow-node-final {
+  color: var(--blue-dark);
+  font-size: 0.92rem;
+}
+
 /* 작성 단계 */
 .steps-wrap {
   background: var(--blue-light);
@@ -971,6 +1024,8 @@ em { font-style: normal; }
   .kakao-card { flex-direction: column; }
   .qr-placeholder { width: 100%; display: flex; justify-content: center; }
   .sms-only-notice { flex-direction: column; gap: 10px; }
+  .consent-flow-notice { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .flow-notice-label { border-right: none; padding-right: 0; margin-right: 0; border-bottom: 1px solid var(--blue-mid); padding-bottom: 6px; margin-bottom: 2px; }
 
   /* 하단 CTA */
   .final-cta { padding: 48px 20px; }
