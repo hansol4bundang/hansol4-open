@@ -287,46 +287,81 @@ em { font-style: normal; }
   width: 100%;
 }
 
-/* 작성 후 진행 흐름 안내 */
+/* 작성 후 진행 흐름 안내 (주요 공지 스타일) */
 .consent-flow-notice {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   background: var(--blue-light);
-  border: 1.5px solid var(--blue-mid);
-  border-radius: 10px;
-  padding: 14px 20px;
+  border: 2px solid var(--blue);
+  border-radius: 14px;
+  padding: 24px 28px;
   margin-bottom: 32px;
-  flex-wrap: wrap;
 }
-.flow-notice-label {
-  font-size: 0.78rem;
+.flow-notice-badge {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.flow-notice-title {
+  display: block;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--blue-dark);
-  white-space: nowrap;
-  flex-shrink: 0;
-  padding-right: 4px;
-  border-right: 2px solid var(--blue-mid);
-  margin-right: 4px;
+  margin-bottom: 18px;
+  line-height: 1.5;
 }
-.flow-steps-inline {
+.flow-steps-row {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
 }
-.flow-node {
-  font-size: 0.88rem;
-  color: var(--text);
+.flow-step-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 16px;
+  flex: 1;
 }
-.flow-arr {
+.flow-step-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
   font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flow-step-text {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 600;
+  line-height: 1.4;
+}
+.flow-step-final {
+  border: 1.5px solid var(--blue);
+}
+.flow-step-final .flow-step-num {
+  background: var(--blue-dark);
+}
+.flow-step-final .flow-step-text {
+  color: var(--blue-dark);
+  font-weight: 800;
+}
+.flow-step-arrow {
+  font-size: 1.1rem;
   color: var(--blue);
   font-weight: 700;
-}
-.flow-node-final {
-  color: var(--blue-dark);
-  font-size: 0.92rem;
+  flex-shrink: 0;
 }
 
 /* 작성 단계 */
@@ -1024,8 +1059,10 @@ em { font-style: normal; }
   .kakao-card { flex-direction: column; }
   .qr-placeholder { width: 100%; display: flex; justify-content: center; }
   .sms-only-notice { flex-direction: column; gap: 10px; }
-  .consent-flow-notice { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .flow-notice-label { border-right: none; padding-right: 0; margin-right: 0; border-bottom: 1px solid var(--blue-mid); padding-bottom: 6px; margin-bottom: 2px; }
+  .consent-flow-notice { padding: 20px; }
+  .flow-steps-row { flex-direction: column; gap: 6px; }
+  .flow-step-block { width: 100%; }
+  .flow-step-arrow { transform: rotate(90deg); }
 
   /* 하단 CTA */
   .final-cta { padding: 48px 20px; }
