@@ -363,6 +363,14 @@ em { font-style: normal; }
   font-weight: 700;
   flex-shrink: 0;
 }
+.flow-contact-note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--blue-mid);
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
 
 /* 작성 단계 */
 .steps-wrap {
