@@ -352,7 +352,10 @@
             </div>
             <div class="donation-row">
               <span class="donation-label">계좌번호</span>
-              <span class="donation-value account-num">474501-01-160608</span>
+              <div class="account-copy-wrap" id="copy-account-btn" role="button" tabindex="0" title="클릭하면 계좌번호가 복사됩니다">
+                <span class="donation-value account-num">474501-01-160608</span>
+                <span class="account-copy-badge" id="account-hint-text">복사</span>
+              </div>
             </div>
             <div class="donation-row">
               <span class="donation-label">금액</span>
@@ -495,6 +498,22 @@
       }
       copyNumberBtn.addEventListener('click', copyNumber);
       copyNumberBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') copyNumber(); });
+
+      // 계좌번호 복사
+      const copyAccountBtn = document.getElementById('copy-account-btn');
+      const accountHint = document.getElementById('account-hint-text');
+      function copyAccount() {
+        navigator.clipboard.writeText('474501-01-160608').then(() => {
+          accountHint.textContent = '복사됐습니다!';
+          accountHint.style.background = '#16a34a';
+          setTimeout(() => {
+            accountHint.textContent = '복사';
+            accountHint.style.background = '';
+          }, 1800);
+        });
+      }
+      copyAccountBtn.addEventListener('click', copyAccount);
+      copyAccountBtn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') copyAccount(); });
 
       // 문자 내용 복사 버튼
       document.getElementById('copy-msg-btn').addEventListener('click', () => {
