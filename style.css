@@ -1216,7 +1216,18 @@ em { font-style: normal; }
 @media (max-width: 640px) {
   html { font-size: 17px; }
 
-  .topbar { display: none; }
+  .topbar {
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 80px;
+    opacity: 1;
+  }
+  .topbar.scrolled-away {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
 
   /* 탭 — 2×2 그리드 */
   .nav-inner {

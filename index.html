@@ -446,6 +446,20 @@
     </div>
 
     <script>
+      // 모바일에서 스크롤 시 상단 바 숨김
+      const topbar = document.querySelector('.topbar');
+      let lastScrollY = 0;
+      window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 640) {
+          if (window.scrollY > 40) {
+            topbar.classList.add('scrolled-away');
+          } else {
+            topbar.classList.remove('scrolled-away');
+          }
+        }
+        lastScrollY = window.scrollY;
+      }, { passive: true });
+
       const nav = document.getElementById('site-nav');
       const tabs = document.querySelectorAll('.nav-tab:not(.nav-tab-cta)');
       const sections = ['consent','bizplan','whynow','donation','cta'].map(id => document.getElementById(id));
