@@ -1216,6 +1216,8 @@ em { font-style: normal; }
 @media (max-width: 640px) {
   html { font-size: 17px; }
 
+  .topbar { display: none; }
+
   /* 탭 — 2×2 그리드 */
   .nav-inner {
     flex-wrap: wrap;
