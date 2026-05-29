@@ -910,20 +910,43 @@ em { font-style: normal; }
   margin-top: 4px;
 }
 
-.donation-cafe-btn {
+.donation-action-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.donation-cafe-btn,
+.donation-kakao-btn,
+.donation-sms-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background: #03c75a;
-  color: #fff;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  padding: 16px 36px;
+  padding: 14px 24px;
   border-radius: var(--radius);
   text-decoration: none;
   transition: background 0.2s;
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+.donation-cafe-btn {
+  background: #03c75a;
+  color: #fff;
 }
 .donation-cafe-btn:hover { background: #02a74d; }
+.donation-kakao-btn {
+  background: #fee500;
+  color: #3a1d1d;
+}
+.donation-kakao-btn:hover { background: #f5da00; }
+.donation-sms-btn {
+  background: var(--blue);
+  color: #fff;
+}
+.donation-sms-btn:hover { background: var(--blue-dark); }
 
 /* ── 하단 CTA ── */
 .final-cta {
@@ -1050,6 +1073,19 @@ em { font-style: normal; }
   line-height: 1.55;
 }
 .red { color: #dc2626; }
+
+/* 카카오 방 이름 배지 */
+.kakao-room-badge {
+  display: inline-block;
+  background: #fee500;
+  color: #3a1d1d;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 20px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
 
 /* ── 카카오 QR ── */
 .kakao-wrap { margin-top: 8px; margin-bottom: 28px; }
@@ -1224,6 +1260,12 @@ em { font-style: normal; }
   .flow-steps-row { flex-direction: column; gap: 6px; }
   .flow-step-block { width: 100%; }
   .flow-step-arrow { transform: rotate(90deg); }
+
+  /* 모금 버튼 모음 */
+  .donation-action-row { flex-direction: column; }
+  .donation-cafe-btn,
+  .donation-kakao-btn,
+  .donation-sms-btn { width: 100%; }
 
   /* 하단 CTA */
   .final-cta { padding: 48px 20px; }
